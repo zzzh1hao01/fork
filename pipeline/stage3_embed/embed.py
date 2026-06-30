@@ -65,6 +65,17 @@ def ensure_collection(qdrant_client: QdrantClient, vector_size: int = EMBEDDING_
         collection_name=COLLECTION_NAME,
         vectors_config=VectorParams(size=vector_size, distance=Distance.COSINE),
     )
+    # Qdrant Cloud requires an explicit payload index to filter on these
+    # fields -- without it, retrieval.search()'s speaker/book_number filter
+    # raises a 400 (discovered when Stage 4 hit this for real).
+    from qdrant_client.models import PayloadSchemaType
+
+    qdrant_client.create_payload_index(
+        COLLECTION_NAME, field_name="speaker", field_schema=PayloadSchemaType.KEYWORD
+    )
+    qdrant_client.create_payload_index(
+        COLLECTION_NAME, field_name="book_number", field_schema=PayloadSchemaType.INTEGER
+    )
 
 
 def embed_lines(
