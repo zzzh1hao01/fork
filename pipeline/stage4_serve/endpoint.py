@@ -13,6 +13,8 @@ Deploy:
     flash deploy
 """
 
+import os
+
 from runpod_flash import Endpoint, GpuGroup
 
 stage4 = Endpoint(
@@ -31,17 +33,21 @@ stage4 = Endpoint(
         "openai",
         "git+https://github.com/zzzh1hao01/fork.git@engineer-a/infra-pipeline",
     ],
+    env={
+        "QDRANT_URL": os.environ["QDRANT_URL"],
+        "QDRANT_API_KEY": os.environ["QDRANT_API_KEY"],
+        "OPENAI_API_KEY": os.environ["OPENAI_API_KEY"],
+    },
 )
-
-TOP_K = 8
-GPT_MODEL = "gpt-4o"
-
 
 @stage4.post("/respond")
 async def respond(data: dict) -> dict:
     """data: a ServeRequest-shaped dict (character, user_message, mode,
     book_number, fork_id?, custom_prompt?). Returns a ServeResponse dict."""
     import os
+
+    TOP_K = 8
+    GPT_MODEL = "gpt-4o"
 
     from openai import OpenAI
     from qdrant_client import QdrantClient
