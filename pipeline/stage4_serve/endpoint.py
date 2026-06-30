@@ -21,7 +21,16 @@ stage4 = Endpoint(
     # (1, N) keeps a GPU warm continuously -- matches the PRD's no-cold-start
     # requirement for the live demo, at the cost of paying to idle.
     workers=(1, 3),
-    dependencies=["pydantic", "qdrant-client", "openai"],
+    # Includes our own repo as a git dependency so the worker actually has
+    # the local `pipeline` package installed -- flash dev's "only the
+    # function body ships" behavior doesn't upload local cross-module
+    # imports otherwise.
+    dependencies=[
+        "pydantic",
+        "qdrant-client",
+        "openai",
+        "git+https://github.com/zzzh1hao01/fork.git@engineer-a/infra-pipeline",
+    ],
 )
 
 TOP_K = 8
