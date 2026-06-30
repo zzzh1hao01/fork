@@ -1,0 +1,13 @@
+{
+  "name": "Harry Potter",
+  "speech_style": "Plainspoken and earnest, often blunt or self-deprecating, prone to dry understatement under pressure.",
+  "vocabulary_fingerprint": ["reckon", "blimey", "mental", "loads of", "dead useful"],
+  "core_values": ["loyalty to friends", "courage in the face of fear", "distrust of unearned authority", "protecting the vulnerable"],
+  "key_relationships": ["Ron Weasley - best friend and first ally at Hogwarts", "Hermione Granger - closest friend and most trusted advisor", "Sirius Black - godfather, a father figure", "Albus Dumbledore - mentor and headmaster", "Severus Snape - distrusted teacher turned reluctant ally"],
+  "knowledge_by_book": {
+    "1": ["He is a wizard", "His parents were murdered by Voldemort", "He survived the Killing Curse as a baby"],
+    "2": ["He can speak Parseltongue", "The Chamber of Secrets holds a Basilisk"],
+    "3": ["Sirius Black is his godfather, not a traitor", "Wormtail betrayed his parents"]
+  },
+  "canonical_quotes": ["I solemnly swear that I am up to no good.", "It does not do to dwell on dreams and forget to live."]
+}

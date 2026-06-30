@@ -14,7 +14,7 @@ Fork ingests a book's full text and automatically builds grounded AI agents of i
 
 Readers can: chat with characters in-canon, explore short alternate-path scenes at curated decision points, and generate fan fiction in the character's voice. The entire pipeline runs on RunPod Flash serverless GPU infrastructure — async ingestion, burst persona extraction, and a warm real-time serving endpoint.
 
-The demo corpus is the Harry Potter series (all 7 books). Characters supported at launch: Harry Potter, Hermione Granger, Lord Voldemort.
+The demo corpus is the Harry Potter series (all 7 books). Characters supported at launch: Harry Potter, Ron Weasley, Hermione Granger.
 
 ## User Stories
 
@@ -82,7 +82,7 @@ The demo corpus is the Harry Potter series (all 7 books). Characters supported a
 
 - Framework: Next.js + Tailwind CSS
 - Three surfaces accessible from a shared navigation: Character Chat, Fork Explorer, Fan Fiction
-- Character Chat: character selector (Harry / Hermione / Voldemort), chat thread, citation side panel showing retrieved source passages
+- Character Chat: character selector (Harry / Ron / Hermione), chat thread, citation side panel showing retrieved source passages
 - Fork Explorer: grid of 4 fork cards with title + setup summary; click → streaming alternate scene generation
 - Fan Fiction: character multi-select + free-text prompt → streaming scene output
 - All generation surfaces stream responses token-by-token
@@ -94,8 +94,8 @@ The demo corpus is the Harry Potter series (all 7 books). Characters supported a
 
 ### Character Roster (Demo)
 - Harry Potter
+- Ron Weasley
 - Hermione Granger
-- Lord Voldemort
 
 ### Fork Points (Pre-Curated)
 1. "What if Harry was Sorted into Slytherin?"
@@ -133,7 +133,7 @@ A good test validates **external behavior** — what comes out of a module given
 - LoRA fine-tuning for voice fidelity (architectural provision exists, not built for demo)
 - User accounts, saved conversations, or history persistence
 - Books other than Harry Potter
-- Characters beyond Harry, Hermione, and Voldemort
+- Characters beyond Harry, Ron, and Hermione
 - User-defined fork points beyond the 4 pre-curated ones (fan fiction free-form covers this need)
 - Moderation or content filtering
 - Mobile-optimized UI

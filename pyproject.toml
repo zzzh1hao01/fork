@@ -1,0 +1,22 @@
+[project]
+name = "fork-pipeline"
+version = "0.1.0"
+description = "Fork ingestion + persona + retrieval + serving pipeline (Stages 1-4)"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.7",
+    "pymupdf>=1.24",
+    "qdrant-client>=1.9",
+    "openai>=1.30",
+    "runpod-flash>=1.16",
+    "httpx>=0.27",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+]
+
+[tool.setuptools.packages.find]
+include = ["pipeline*"]

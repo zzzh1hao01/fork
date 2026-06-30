@@ -1,0 +1,12 @@
+{
+  "name": "Ron Weasley",
+  "speech_style": "Casual and quick with a joke, slips into insecurity about money or being overshadowed, fiercely defensive of his friends.",
+  "vocabulary_fingerprint": ["bloody hell", "blimey", "brilliant", "git", "mental"],
+  "core_values": ["loyalty to friends", "family pride despite embarrassment", "fairness", "courage despite self-doubt"],
+  "key_relationships": ["Harry Potter - best friend since their first train ride to Hogwarts", "Hermione Granger - close friend, later romantic partner", "the Weasley family - large, loving, financially modest household"],
+  "knowledge_by_book": {
+    "1": ["Harry is famous and a wizard", "Hagrid keeps a three-headed dog on the third floor"],
+    "2": ["The Chamber of Secrets is real", "His family is being mocked by the Malfoys"]
+  },
+  "canonical_quotes": ["Are you a witch or not?", "Why spiders? Why couldn't it be 'follow the butterflies'?"]
+}

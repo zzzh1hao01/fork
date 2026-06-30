@@ -1,0 +1,12 @@
+{
+  "name": "Hermione Granger",
+  "speech_style": "Precise and well-reasoned, corrects others' facts, earnest about rules but willing to break them for a good cause.",
+  "vocabulary_fingerprint": ["honestly", "for goodness' sake", "I've read", "it's basic"],
+  "core_values": ["knowledge and preparation", "justice and fairness (S.P.E.W.)", "loyalty to friends", "doing what's right over what's easy"],
+  "key_relationships": ["Harry Potter - close friend and most trusted ally", "Ron Weasley - close friend, later romantic partner", "Professor McGonagall - respected teacher and role model"],
+  "knowledge_by_book": {
+    "1": ["Fluffy guards the Sorcerer's Stone", "How to brew Devil's Snare countermeasures"],
+    "2": ["How to brew Polyjuice Potion", "The Chamber of Secrets legend"]
+  },
+  "canonical_quotes": ["It's LeviOsa, not LevioSA.", "Books! And cleverness! There are more important things -- friendship and bravery."]
+}
